@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>React - Template</title>
+    <link rel='stylesheet' href='resources/stylesheets/bootstrap-4.0.0.css'>
+    <link rel='stylesheet' href='resources/stylesheets/my.css'>
+    <script src='resources/javascripts/jquery-3.1.1.js'></script>
+    <script src='resources/javascripts/bootstrap-4.0.0.js'></script>
+    <script src='resources/javascripts/vue.js'></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+</head>
+<body>
+    <div class='container'>
+        <div class='jumbotron'>
+            <h1 class='display-4'>Reddit Eraser</h1>
+            <hr class='my-4'>
+
+            <div class='row'>
+                <div class="form-group col-md-6">
+                    <label>From Date</label>
+                    <input type="date" class="form-control">
+                </div>
+                <div class="form-group col-md-6">
+                    <label>To Date</label>
+                    <input type="date" class="form-control">
+                </div>
+            </div>
+
+            <div class='row'>
+                <div id='subreddit-list' class='col-md-6 form-group'>
+                    <label>Subreddits</label>
+                    <br/>
+                    <div class='box'>singapore<span class='box-close'>x</span></div>
+                    <div v-for='subreddit in subredditList' class='box'>{{subreddit}}<span class='box-close'>x</span></div>
+                    <br/>
+                    <br/>
+                    <div class='input-group'>
+                        <input v-model='inputVal' class='col form-control'/>
+                        <button type='button' class='col-md-auto btn-primary' v-on:click='add'>+</button>
+                    </div>
+                </div>
+            </div>
+
+            </p>
+        </div>
+    </div>
+
+    <script src='search.js'></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
